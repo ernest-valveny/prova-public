@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+
+mkdir /autograder/source/source
+cp /autograder/submission/* /autograder/source/source
+cd /autograder/source/test
+
+g++ *.cpp ../source/*.cpp -o test
+./test
+
+cp results.json /autograder/results/results.json
